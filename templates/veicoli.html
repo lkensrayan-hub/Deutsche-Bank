@@ -2,24 +2,27 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Assicurazione Veicoli - Deutsche Bank</title>
+    <title>DB - Concessionaria</title>
     <style>
-        body { background: #001f3f; color: white; font-family: 'Segoe UI', sans-serif; padding: 20px; }
-        .form-container { background: rgba(255,255,255,0.1); max-width: 500px; margin: 30px auto; padding: 30px; border-radius: 15px; border: 1px solid #0074D9; }
-        h2 { color: #0074D9; text-align: center; }
-        input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: none; box-sizing: border-box; }
-        button { background: #2ECC40; color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        body { background: #001f3f; color: white; font-family: sans-serif; text-align: center; }
+        .container { max-width: 500px; margin: 50px auto; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; border: 1px solid #2ECC40; }
+        select, input, button { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
+        button { background: #2ECC40; color: white; font-weight: bold; cursor: pointer; }
     </style>
 </head>
 <body>
-    <div class="form-container">
-        <h2>🚗 Polizza Veicoli</h2>
+    <div class="container">
+        <h1>🚗 Concessionaria Deutsche Bank</h1>
         <form action="/veicoli" method="POST">
-            <input type="text" name="nome_rp" placeholder="Nome e Cognome RP" required>
-            <input type="text" name="marca_modello" placeholder="Marca e Modello Veicolo" required>
-            <input type="text" name="targa" placeholder="Targa del mezzo" required>
-            <input type="text" name="incidenti" placeholder="Il veicolo ha subito incidenti? (Sì/No)" required>
-            <button type="submit">ATTIVA ASSICURAZIONE</button>
+            <input type="text" name="nome_rp" placeholder="Tuo Nome e Cognome RP" required>
+            <label>Scegli il Veicolo:</label>
+            <select name="veicolo_scelto">
+                <option value="Ubermacht Sentinel">Ubermacht Sentinel - 60.000$</option>
+                <option value="Benefactor XLS">Benefactor XLS (Blindata) - 250.000$</option>
+                <option value="Pegassi Tempesta">Pegassi Tempesta - 550.000$</option>
+            </select>
+            <input type="text" name="metodo_pagamento" placeholder="Metodo: Contanti o Bonifico?" required>
+            <button type="submit">INVIA RICHIESTA D'ACQUISTO</button>
         </form>
     </div>
 </body>
