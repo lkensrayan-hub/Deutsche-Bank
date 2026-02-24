@@ -74,5 +74,6 @@ def invia_discord(url, titolo, dati):
     requests.post(url, json=payload)
 
 if __name__ == '__main__':
-    # Questo serve per far capire a Render dove far girare il sito
-    app.run(host='0.0.0.0', port=10000)
+    import os
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
