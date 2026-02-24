@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Trading Center - Deutsche Bank</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background: #001f3f; color: white; font-family: 'Segoe UI', sans-serif; text-align: center; padding: 20px; }
+        .chart-box { background: white; padding: 20px; border-radius: 15px; max-width: 800px; margin: 40px auto; }
+        .btn-home { background: #0074D9; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>📈 Centro Investimenti & Trading</h1>
+    <p>Monitora l'andamento del mercato in tempo reale.</p>
+    
+    <div class="chart-box">
+        <canvas id="tradingChart"></canvas>
+    </div>
+
+    <a href="/home" class="btn-home">Torna alla Home</a>
+
+    <script>
+        const ctx = document.getElementById('tradingChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['08:00', '10:00', '12:00', '14:00', '16:00', '18:00'],
+                datasets: [{
+                    label: 'Valore Azioni DB ($)',
+                    data: [150, 165, 140, 190, 185, 210],
+                    borderColor: '#0074D9',
+                    backgroundColor: 'rgba(0, 116, 217, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
