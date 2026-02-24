@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Patrimonio & Asset - Deutsche Bank</title>
+    <style>
+        body { background: #001f3f; color: white; font-family: 'Segoe UI', sans-serif; padding: 20px; }
+        .form-container { background: rgba(255,255,255,0.1); max-width: 500px; margin: 30px auto; padding: 30px; border-radius: 15px; border: 1px solid #0074D9; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        h2 { color: #0074D9; text-align: center; }
+        .section-title { background: #0074D9; padding: 5px 10px; font-size: 14px; margin-top: 20px; border-radius: 3px; font-weight: bold; }
+        input, select { width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: none; box-sizing: border-box; }
+        button { background: #2ECC40; color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 16px; margin-top: 20px; }
+        .info-text { font-size: 12px; color: #BDC3C7; text-align: center; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>🏠 Divisione Patrimonio</h2>
+        <p class="info-text">Gestione compravendita e affitti immobiliari/veicoli</p>
+        
+        <form action="/patrimonio" method="POST">
+            <div class="section-title">DATI RICHIESTANTE</div>
+            <input type="text" name="nome_rp" placeholder="Tuo Nome e Cognome RP" required>
+            <input type="text" name="lavoro" placeholder="Tua occupazione attuale" required>
+
+            <div class="section-title">DETTAGLI ASSET</div>
+            <p style="font-size: 13px; margin: 10px 0 5px 0;">Cosa desideri fare?</p>
+            <select name="tipo_operazione">
+                <option value="vendita_casa">Vendere una Casa</option>
+                <option value="affitto_casa">Mettere in Affitto una Casa</option>
+                <option value="vendita_auto">Vendere un Veicolo</option>
+                <option value="affitto_auto">Mettere in Affitto un Veicolo</option>
+            </select>
+            
+            <input type="text" name="descrizione_asset" placeholder="Modello auto o Indirizzo casa" required>
+            <input type="number" name="valore_stimato" placeholder="Prezzo richiesto ($)" required>
+
+            <div class="section-title">DICHIARAZIONE</div>
+            <p style="font-size: 11px; font-style: italic;">Dichiaro che i beni sopra elencati sono di mia legittima proprietà e privi di vincoli giudiziari.</p>
+            
+            <button type="submit">INVIA PRATICA PATRIMONIALE</button>
+        </form>
+    </div>
+</body>
+</html>
