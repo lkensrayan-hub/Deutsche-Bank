@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Assicurazione Veicoli - Deutsche Bank</title>
+    <style>
+        body { background: #001f3f; color: white; font-family: 'Segoe UI', sans-serif; padding: 20px; }
+        .form-container { background: rgba(255,255,255,0.1); max-width: 500px; margin: 30px auto; padding: 30px; border-radius: 15px; border: 1px solid #0074D9; }
+        h2 { color: #0074D9; text-align: center; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: none; box-sizing: border-box; }
+        button { background: #2ECC40; color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>🚗 Polizza Veicoli</h2>
+        <form action="/veicoli" method="POST">
+            <input type="text" name="nome_rp" placeholder="Nome e Cognome RP" required>
+            <input type="text" name="marca_modello" placeholder="Marca e Modello Veicolo" required>
+            <input type="text" name="targa" placeholder="Targa del mezzo" required>
+            <input type="text" name="incidenti" placeholder="Il veicolo ha subito incidenti? (Sì/No)" required>
+            <button type="submit">ATTIVA ASSICURAZIONE</button>
+        </form>
+    </div>
+</body>
+</html>
